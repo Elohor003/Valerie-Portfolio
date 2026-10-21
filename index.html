@@ -3,29 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#f7f4ee">
-<meta name="description" content="Valerie Studio creates thoughtful, elegant websites for ambitious small businesses. Explore our website design portfolio and start your project.">
-<title>Valerie Studio — Thoughtful Websites, Beautifully Built</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#f8f5ef">
+<meta name="description" content="Valerie Studio creates elegant, modern websites for ambitious small businesses.">
+<title>Valerie Studio | Thoughtful Websites. Lasting Impressions.</title>
 
 <style>
 :root {
---cream: #f7f4ee;
+--cream: #f8f5ef;
 --paper: #fffdf9;
---ink: #24231f;
---muted: #77746c;
---line: #ded9cf;
---brown: #6f4e37;
---gold: #a78352;
---serif: "Playfair Display", Georgia, serif;
---sans: "DM Sans", Arial, sans-serif;
---container: 1160px;
+--ink: #211e1a;
+--muted: #777168;
+--gold: #b28a50;
+--line: #e6dfd4;
+--dark: #28241f;
+--serif: Georgia, "Times New Roman", serif;
+--sans: Arial, Helvetica, sans-serif;
 }
 
-* { box-sizing: border-box; }
+* {
+box-sizing: border-box;
+}
 
 html {
 scroll-behavior: smooth;
@@ -38,91 +35,146 @@ background: var(--cream);
 color: var(--ink);
 font-family: var(--sans);
 line-height: 1.7;
--webkit-font-smoothing: antialiased;
+overflow-wrap: break-word;
 }
 
-img { display: block; max-width: 100%; }
-a { color: inherit; text-decoration: none; }
-button { font: inherit; }
+img {
+display: block;
+width: 100%;
+max-width: 100%;
+object-fit: cover;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+button, a {
+-webkit-tap-highlight-color: transparent;
+}
+
+button {
+font: inherit;
+}
+
+p {
+margin: 0 0 18px;
+color: var(--muted);
+}
+
+h1, h2, h3 {
+margin: 0;
+font-weight: 400;
+line-height: 1.15;
+overflow-wrap: normal;
+}
+
+h1, h2, .serif {
+font-family: var(--serif);
+}
+
+h1 {
+font-size: clamp(3rem, 7vw, 6.2rem);
+letter-spacing: -3px;
+}
+
+h2 {
+font-size: clamp(2.2rem, 4.5vw, 4rem);
+letter-spacing: -1.5px;
+}
+
+h3 {
+font-size: 1.45rem;
+}
+
+section {
+padding: 100px 0;
+scroll-margin-top: 76px;
+}
 
 .container {
-width: min(var(--container), calc(100% - 48px));
-margin-inline: auto;
+width: min(1160px, calc(100% - 48px));
+margin: 0 auto;
 }
 
 .eyebrow {
-color: var(--brown);
-font-size: 10px;
+display: inline-block;
+margin-bottom: 20px;
+color: var(--gold);
+font-size: 11px;
 font-weight: 700;
-letter-spacing: 2.8px;
+letter-spacing: 3px;
 text-transform: uppercase;
 }
 
-.section {
-padding: 105px 0;
-}
-
 .section-heading {
-max-width: 650px;
-margin-bottom: 45px;
+max-width: 680px;
+margin-bottom: 48px;
 }
 
-.section-heading h2 {
-margin: 12px 0 14px;
-font-family: var(--serif);
-font-size: clamp(34px, 5vw, 55px);
-font-weight: 400;
-letter-spacing: -1.6px;
-line-height: 1.15;
-}
-
-.section-heading p,
-.muted {
-color: var(--muted);
+.section-heading p {
+max-width: 550px;
+margin-top: 20px;
 }
 
 .button {
 display: inline-flex;
+min-height: 50px;
 align-items: center;
 justify-content: center;
-gap: 12px;
-min-height: 51px;
-padding: 13px 22px;
+gap: 10px;
+padding: 14px 24px;
 border: 1px solid var(--ink);
 background: var(--ink);
 color: white;
 font-size: 12px;
-font-weight: 600;
-letter-spacing: .3px;
-transition: background .2s, color .2s, transform .2s;
+font-weight: 700;
+letter-spacing: 1px;
+text-align: center;
+transition: background .2s, color .2s;
 }
 
 .button:hover {
-background: var(--brown);
-border-color: var(--brown);
-transform: translateY(-2px);
-}
-
-.button-light {
 background: transparent;
 color: var(--ink);
 }
 
-.button-light:hover { color: white; }
+.button-light {
+border-color: var(--line);
+background: var(--paper);
+color: var(--ink);
+}
+
+.button-light:hover {
+border-color: var(--ink);
+}
+
+.button-gold {
+border-color: var(--gold);
+background: var(--gold);
+color: white;
+}
+
+.button-gold:hover {
+background: transparent;
+color: var(--gold);
+}
 
 /* Navigation */
-.site-header {
+
+header {
 position: sticky;
-z-index: 10;
+z-index: 20;
 top: 0;
-border-bottom: 1px solid rgba(36,35,31,.10);
-background: rgba(247,244,238,.95);
-backdrop-filter: blur(14px);
+border-bottom: 1px solid rgba(230,223,212,.9);
+background: rgba(248,245,239,.96);
+backdrop-filter: blur(12px);
 }
 
 .nav {
 display: flex;
-min-height: 80px;
+min-height: 82px;
 align-items: center;
 justify-content: space-between;
 gap: 24px;
@@ -131,19 +183,19 @@ gap: 24px;
 .brand {
 display: flex;
 flex-direction: column;
-line-height: 1.15;
+line-height: 1.2;
 }
 
 .brand-name {
 font-family: var(--serif);
 font-size: 27px;
-letter-spacing: -.8px;
+letter-spacing: -.7px;
 }
 
-.brand-subtitle {
+.brand-caption {
 margin-top: 5px;
 color: var(--muted);
-font-size: 8px;
+font-size: 9px;
 letter-spacing: 2.5px;
 text-transform: uppercase;
 }
@@ -151,63 +203,54 @@ text-transform: uppercase;
 .nav-links {
 display: flex;
 align-items: center;
-gap: 29px;
+justify-content: flex-end;
+gap: 27px;
 }
 
-.nav-links a {
-font-size: 11px;
-font-weight: 600;
+.nav-links > a:not(.button) {
+color: #514b43;
+font-size: 12px;
 }
 
-.nav-links a:not(.nav-cta):hover { color: var(--brown); }
-
-.nav-cta {
-padding: 11px 16px;
-border: 1px solid var(--ink);
+.nav-links > a:not(.button):hover {
+color: var(--gold);
 }
 
 .menu-toggle {
 display: none;
-padding: 8px;
-border: 0;
-background: transparent;
+border: 1px solid var(--line);
+background: var(--paper);
+padding: 9px 13px;
 color: var(--ink);
-cursor: pointer;
 }
 
 /* Hero */
-.hero { padding: 64px 0 88px; }
+
+.hero {
+padding: 80px 0 92px;
+}
 
 .hero-grid {
 display: grid;
-grid-template-columns: 1fr 1.03fr;
+grid-template-columns: 1.02fr .98fr;
 align-items: center;
-gap: 66px;
+gap: 70px;
 }
 
-.hero-copy { padding: 22px 0; }
-
-.hero h1 {
-max-width: 580px;
-margin: 20px 0;
-font-family: var(--serif);
-font-size: clamp(48px, 6.1vw, 76px);
-font-weight: 400;
-letter-spacing: -3px;
-line-height: 1.04;
+.hero-copy {
+min-width: 0;
 }
 
 .hero h1 em {
-color: var(--brown);
+color: var(--gold);
 font-weight: 400;
 }
 
-.hero-copy > p {
-max-width: 440px;
-margin: 0 0 28px;
-color: var(--muted);
-font-size: 14px;
-line-height: 1.95;
+.hero-description {
+max-width: 480px;
+margin: 25px 0 30px;
+font-size: 16px;
+line-height: 1.9;
 }
 
 .hero-actions {
@@ -220,10 +263,10 @@ gap: 12px;
 display: flex;
 align-items: center;
 gap: 12px;
-margin-top: 35px;
+margin-top: 34px;
 color: var(--muted);
-font-size: 10px;
-letter-spacing: .4px;
+font-size: 11px;
+letter-spacing: .5px;
 }
 
 .hero-note::before {
@@ -236,425 +279,582 @@ content: "";
 .hero-visual {
 position: relative;
 min-width: 0;
-padding: 0 0 25px 22px;
 }
 
 .hero-image {
 width: 100%;
-height: 490px;
-object-fit: cover;
+height: 530px;
+border-radius: 2px;
+background: #e8dfd1;
 object-position: center;
-background: #ded6ca;
 }
 
-.image-caption {
+.hero-image-label {
 position: absolute;
-right: -10px;
-bottom: 0;
-width: min(270px, 75%);
-padding: 20px 23px;
+right: -15px;
+bottom: 28px;
+max-width: 225px;
+padding: 22px 25px;
 background: var(--paper);
-box-shadow: 0 12px 38px rgba(36,35,31,.08);
+box-shadow: 0 10px 40px rgba(40,30,15,.08);
 }
 
-.image-caption strong {
+.hero-image-label strong {
 display: block;
 font-family: var(--serif);
-font-size: 22px;
+font-size: 20px;
 font-weight: 400;
 }
 
-.image-caption span {
+.hero-image-label span {
+display: block;
+margin-top: 5px;
 color: var(--muted);
-font-size: 10px;
+font-size: 11px;
 }
 
-/* Studio statement */
-.statement {
-padding: 25px 0;
-border-block: 1px solid var(--line);
-background: rgba(255,253,249,.48);
+/* Small brand statement */
+
+.brand-strip {
+border-top: 1px solid var(--line);
+border-bottom: 1px solid var(--line);
+background: #f1ece3;
 }
 
-.statement-inner {
+.brand-strip-inner {
 display: flex;
+min-height: 94px;
 align-items: center;
 justify-content: space-between;
-gap: 20px;
+gap: 24px;
 }
 
-.statement-inner p {
+.brand-strip p {
 margin: 0;
 font-family: var(--serif);
-font-size: clamp(17px, 2.3vw, 25px);
+font-size: 20px;
 }
 
-.statement-mark {
-color: var(--gold);
-font-size: 23px;
+.brand-strip span {
+color: var(--muted);
+font-size: 10px;
+letter-spacing: 2px;
+text-transform: uppercase;
 }
 
 /* Portfolio */
-.portfolio-top {
-display: flex;
-align-items: end;
-justify-content: space-between;
-gap: 25px;
+
+.portfolio {
+background: var(--paper);
 }
 
-.portfolio-top .section-heading { margin-bottom: 38px; }
+.portfolio-top {
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+gap: 30px;
+}
+
+.portfolio-top .section-heading {
+margin-bottom: 44px;
+}
 
 .project-grid {
 display: grid;
 grid-template-columns: repeat(2, minmax(0, 1fr));
-gap: 46px 26px;
+gap: 42px 30px;
 }
 
-.project { min-width: 0; }
+.project-card {
+display: flex;
+min-width: 0;
+flex-direction: column;
+overflow: hidden;
+border: 1px solid var(--line);
+background: var(--paper);
+}
 
 .project-image-wrap {
 position: relative;
 overflow: hidden;
-background: #e6dfd4;
-aspect-ratio: 1.42 / 1;
+background: #e8e0d4;
+aspect-ratio: 16 / 10;
 }
 
 .project-image {
 width: 100%;
 height: 100%;
 object-fit: cover;
-transition: transform .6s cubic-bezier(.2,.7,.2,1);
+transition: transform .5s ease;
 }
 
-.project:hover .project-image { transform: scale(1.035); }
+.project-card:hover .project-image {
+transform: scale(1.035);
+}
 
 .project-number {
 position: absolute;
-top: 14px;
-left: 14px;
-padding: 7px 10px;
-background: var(--paper);
+top: 15px;
+left: 15px;
+padding: 7px 11px;
+background: rgba(255,253,249,.94);
 color: var(--ink);
-font-size: 9px;
+font-size: 10px;
 letter-spacing: 1px;
 }
 
-.project-info {
+.project-content {
 display: flex;
-align-items: start;
-justify-content: space-between;
-gap: 14px;
-padding-top: 18px;
+flex: 1;
+flex-direction: column;
+align-items: flex-start;
+padding: 27px;
 }
 
-.project-info h3 {
-margin: 0 0 4px;
-font-family: var(--serif);
-font-size: 25px;
-font-weight: 400;
-line-height: 1.3;
+.project-category {
+margin-bottom: 10px;
+color: var(--gold);
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 2px;
+text-transform: uppercase;
 }
 
-.project-info p {
-margin: 0;
-color: var(--muted);
-font-size: 11px;
+.project-content h3 {
+margin-bottom: 12px;
+}
+
+.project-content p {
+margin-bottom: 22px;
+font-size: 13px;
+line-height: 1.8;
 }
 
 .project-link {
 display: inline-flex;
 align-items: center;
-justify-content: center;
-flex: 0 0 37px;
-width: 37px;
-height: 37px;
-border: 1px solid var(--line);
-border-radius: 50%;
-font-size: 17px;
-transition: background .2s, color .2s;
+gap: 10px;
+margin-top: auto;
+padding-top: 5px;
+border-bottom: 1px solid var(--gold);
+padding-bottom: 5px;
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 1px;
+text-transform: uppercase;
 }
 
 .project-link:hover {
-background: var(--ink);
-color: white;
+color: var(--gold);
 }
 
 .portfolio-note {
-margin-top: 35px;
-color: var(--muted);
-font-size: 11px;
+margin: 35px 0 0;
+font-size: 12px;
 }
 
 /* Services */
-.services-section {
-background: #25241f;
-color: #f7f4ee;
-}
-
-.services-section .eyebrow { color: #c9ad83; }
-.services-section .section-heading p { color: #c3c0b8; }
 
 .services-grid {
 display: grid;
 grid-template-columns: repeat(3, minmax(0, 1fr));
-border-top: 1px solid #514e45;
+gap: 20px;
 }
 
-.service {
-padding: 28px 26px 10px 0;
+.service-card {
+min-width: 0;
+padding: 30px 26px;
+border: 1px solid var(--line);
+background: rgba(255,253,249,.55);
 }
 
-.service + .service {
-padding-left: 25px;
-border-left: 1px solid #514e45;
-}
-
-.service-index {
-color: #c9ad83;
-font-size: 10px;
-letter-spacing: 2px;
-}
-
-.service h3 {
-margin: 24px 0 12px;
+.service-number {
+display: inline-block;
+margin-bottom: 26px;
+color: var(--gold);
 font-family: var(--serif);
-font-size: 28px;
-font-weight: 400;
+font-size: 27px;
 }
 
-.service p {
-max-width: 300px;
-color: #c3c0b8;
-font-size: 12px;
+.service-card h3 {
+margin-bottom: 14px;
+}
+
+.service-card p {
+margin: 0;
+font-size: 13px;
 line-height: 1.9;
 }
 
+/* About */
+
+.about {
+background: #eee7dc;
+}
+
+.about-grid {
+display: grid;
+grid-template-columns: .9fr 1.1fr;
+align-items: center;
+gap: 75px;
+}
+
+.about-art {
+min-height: 410px;
+background: #e0d5c5;
+}
+
+.about-art img {
+height: 410px;
+}
+
+.about-copy p {
+margin-top: 22px;
+line-height: 1.95;
+}
+
+.about-points {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 14px;
+margin-top: 28px;
+}
+
+.about-point {
+padding-top: 13px;
+border-top: 1px solid #d4c8b8;
+font-size: 12px;
+}
+
 /* Process */
+
 .process-grid {
 display: grid;
 grid-template-columns: repeat(3, minmax(0, 1fr));
-gap: 35px;
+gap: 28px;
 }
 
-.process-step {
-padding-top: 19px;
-border-top: 1px solid var(--line);
+.process-card {
+padding-top: 25px;
+border-top: 1px solid var(--gold);
 }
 
-.process-step span {
+.process-card .step {
+display: block;
+margin-bottom: 17px;
 color: var(--gold);
 font-size: 11px;
 letter-spacing: 2px;
 }
 
-.process-step h3 {
-margin: 16px 0 8px;
-font-family: var(--serif);
-font-size: 25px;
-font-weight: 400;
+.process-card h3 {
+margin-bottom: 12px;
 }
 
-.process-step p {
-margin: 0;
-color: var(--muted);
-font-size: 12px;
+.process-card p {
+font-size: 13px;
 line-height: 1.9;
 }
 
-/* About */
-.about-section { padding-top: 20px; }
-
-.about-panel {
-display: grid;
-grid-template-columns: .85fr 1fr;
-align-items: center;
-gap: 65px;
-padding: 60px;
-background: #eae3d8;
-}
-
-.about-image {
-width: 100%;
-height: 390px;
-object-fit: cover;
-background: #d4c8b8;
-}
-
-.about-copy h2 {
-margin: 13px 0 20px;
-font-family: var(--serif);
-font-size: clamp(35px, 4.3vw, 49px);
-font-weight: 400;
-letter-spacing: -1px;
-line-height: 1.15;
-}
-
-.about-copy p {
-color: #68645c;
-font-size: 13px;
-line-height: 2;
-}
-
 /* Contact */
-.contact-section {
-padding: 100px 0;
-text-align: center;
+
+.contact {
+padding: 90px 0;
+background: var(--dark);
+color: white;
 }
 
-.contact-inner { max-width: 720px; margin-inline: auto; }
-
-.contact-inner h2 {
-margin: 15px 0;
-font-family: var(--serif);
-font-size: clamp(43px, 7vw, 72px);
-font-weight: 400;
-letter-spacing: -2px;
-line-height: 1.1;
+.contact-grid {
+display: grid;
+grid-template-columns: 1fr auto;
+align-items: center;
+gap: 35px;
 }
 
-.contact-inner > p {
-max-width: 470px;
-margin: 0 auto 28px;
-color: var(--muted);
-font-size: 13px;
+.contact .eyebrow {
+color: #d8b783;
 }
 
-.email-link {
-display: inline-block;
+.contact h2 {
+max-width: 700px;
+}
+
+.contact p {
+max-width: 570px;
 margin-top: 20px;
-padding-bottom: 4px;
-border-bottom: 1px solid var(--gold);
-font-size: 13px;
+color: #d0c8bd;
+}
+
+.contact .button {
+border-color: #d8b783;
+background: #d8b783;
+color: #211e1a;
+white-space: nowrap;
+}
+
+.contact .button:hover {
+background: transparent;
+color: white;
 }
 
 /* Footer */
-.site-footer { border-top: 1px solid var(--line); }
+
+footer {
+padding: 32px 0;
+background: #211e1a;
+color: #c9c0b5;
+}
 
 .footer-inner {
 display: flex;
 align-items: center;
 justify-content: space-between;
 gap: 20px;
-padding-block: 26px;
 }
 
-.footer-inner p,
-.footer-links a {
-color: var(--muted);
-font-size: 10px;
+.footer-brand {
+color: white;
+font-family: var(--serif);
+font-size: 21px;
 }
 
-.footer-links {
-display: flex;
+footer p {
+margin: 5px 0 0;
+color: #b9b0a5;
+font-size: 11px;
+}
+
+.footer-email {
+font-size: 12px;
+overflow-wrap: anywhere;
+}
+
+.footer-email:hover {
+color: #d8b783;
+}
+
+/* Responsive layout */
+
+@media (max-width: 900px) {
+.nav-links {
+gap: 15px;
+}
+
+.hero-grid {
+gap: 35px;
+}
+
+.hero-image {
+height: 450px;
+}
+
+.about-grid {
+gap: 38px;
+}
+
+.project-grid {
+gap: 25px 20px;
+}
+
+.project-content {
+padding: 22px;
+}
+}
+
+@media (max-width: 700px) {
+section {
+padding: 70px 0;
+}
+
+.container {
+width: calc(100% - 36px);
+}
+
+.nav {
+min-height: 72px;
 flex-wrap: wrap;
-gap: 20px;
 }
 
-:focus-visible {
-outline: 2px solid var(--gold);
-outline-offset: 4px;
+.brand-name {
+font-size: 24px;
 }
 
-@media (max-width: 850px) {
-.hero-grid { gap: 32px; }
-.hero-image { height: 420px; }
-.about-panel { gap: 35px; padding: 35px; }
-.about-image { height: 340px; }
-.nav-links { gap: 17px; }
+.menu-toggle {
+display: block;
 }
-
-@media (max-width: 650px) {
-.container { width: min(100% - 36px, var(--container)); }
-.section { padding: 76px 0; }
-.nav { min-height: 72px; }
-.menu-toggle { display: block; }
 
 .nav-links {
-position: absolute;
-top: 71px;
-right: 0;
-left: 0;
 display: none;
+width: 100%;
 align-items: stretch;
+flex-direction: column;
 gap: 0;
-padding: 12px 22px 20px;
+padding: 5px 0 18px;
+}
+
+.nav-links.open {
+display: flex;
+}
+
+.nav-links > a:not(.button) {
+padding: 12px 0;
 border-bottom: 1px solid var(--line);
-background: var(--cream);
 }
 
-.nav-links.open { display: flex; flex-direction: column; }
-.nav-links a { padding: 12px 0; }
-.nav-links .nav-cta { padding: 12px; text-align: center; }
-
-.hero { padding: 42px 0 63px; }
-.hero-grid { grid-template-columns: 1fr; gap: 34px; }
-.hero-copy { padding: 0; }
-.hero h1 { font-size: clamp(48px, 13vw, 66px); letter-spacing: -2px; }
-.hero-copy > p { font-size: 13px; }
-.hero-visual { padding-left: 0; padding-right: 10px; }
-.hero-image { height: 360px; }
-.image-caption { right: 0; }
-
-.statement-inner { align-items: start; }
-.statement-inner p { font-size: 17px; }
-
-.portfolio-top { display: block; }
-.project-grid { grid-template-columns: 1fr; gap: 35px; }
-.project-image-wrap { aspect-ratio: 1.3 / 1; }
-
-.services-grid { grid-template-columns: 1fr; }
-.service, .service + .service {
-padding: 25px 0;
-border-left: 0;
-border-bottom: 1px solid #514e45;
+.nav-links .button {
+margin-top: 12px;
 }
 
-.process-grid { grid-template-columns: 1fr; gap: 28px; }
+.hero {
+padding: 55px 0 65px;
+}
 
-.about-section { padding-top: 0; }
-.about-panel { grid-template-columns: 1fr; gap: 27px; padding: 22px; }
-.about-image { height: 300px; }
+.hero-grid {
+grid-template-columns: 1fr;
+gap: 35px;
+}
 
-.contact-section { padding: 76px 0; }
-.footer-inner { align-items: flex-start; flex-direction: column; gap: 8px; }
+h1 {
+font-size: clamp(3rem, 13vw, 4.5rem);
+letter-spacing: -2px;
+}
+
+.hero-description {
+font-size: 15px;
+}
+
+.hero-image {
+height: auto;
+aspect-ratio: 4 / 3;
+}
+
+.hero-image-label {
+right: 10px;
+bottom: 10px;
+max-width: 190px;
+padding: 15px;
+}
+
+.brand-strip-inner {
+min-height: 90px;
+align-items: flex-start;
+flex-direction: column;
+justify-content: center;
+gap: 5px;
+}
+
+.brand-strip p {
+font-size: 18px;
+}
+
+.portfolio-top {
+align-items: flex-start;
+flex-direction: column;
+}
+
+.portfolio-top .section-heading {
+margin-bottom: 15px;
+}
+
+.project-grid {
+grid-template-columns: minmax(0, 1fr);
+gap: 25px;
+}
+
+.project-image-wrap {
+aspect-ratio: 16 / 10;
+}
+
+.project-content {
+padding: 24px;
+}
+
+.services-grid,
+.process-grid {
+grid-template-columns: minmax(0, 1fr);
+gap: 16px;
+}
+
+.service-card {
+padding: 25px;
+}
+
+.service-number {
+margin-bottom: 15px;
+}
+
+.about-grid {
+grid-template-columns: minmax(0, 1fr);
+gap: 32px;
+}
+
+.about-art,
+.about-art img {
+min-height: 0;
+height: auto;
+aspect-ratio: 4 / 3;
+}
+
+.about-points {
+gap: 12px;
+}
+
+.contact {
+padding: 70px 0;
+}
+
+.contact-grid {
+grid-template-columns: minmax(0, 1fr);
+gap: 25px;
+}
+
+.contact .button {
+justify-self: start;
+white-space: normal;
+}
+
+.footer-inner {
+align-items: flex-start;
+flex-direction: column;
+}
 }
 
 @media (prefers-reduced-motion: reduce) {
-*, *::before, *::after {
-scroll-behavior: auto !important;
+html {
+scroll-behavior: auto;
+}
+
+*,
+*::before,
+*::after {
 transition-duration: .01ms !important;
-animation-duration: .01ms !important;
 }
 }
 </style>
 </head>
 
 <body>
-<header class="site-header">
-<nav class="nav container" aria-label="Main navigation">
+
+<header>
+<div class="container nav">
 <a class="brand" href="#home" aria-label="Valerie Studio home">
 <span class="brand-name">Valerie Studio</span>
-<span class="brand-subtitle">Independent Web Design</span>
+<span class="brand-caption">Digital Design Studio</span>
 </a>
 
 <button class="menu-toggle" id="menuToggle"
-aria-label="Open navigation menu" aria-expanded="false"
-aria-controls="navLinks">
-<svg width="25" height="25" viewBox="0 0 24 24"
-fill="none" stroke="currentColor" stroke-width="1.5"
-aria-hidden="true">
-<path d="M3 7h18M3 12h18M3 17h18"/>
-</svg>
+aria-expanded="false" aria-controls="navLinks">
+Menu ☰
 </button>
 
-<div class="nav-links" id="navLinks">
-<a href="#work">Selected Work</a>
+<nav class="nav-links" id="navLinks" aria-label="Main navigation">
+<a href="#home">Home</a>
+<a href="#work">Our Work</a>
 <a href="#services">Services</a>
-<a href="#process">Process</a>
 <a href="#about">About</a>
-<a class="nav-cta" href="#contact">Start a Project ↗</a>
-</div>
+<a class="button" href="#contact">Start a Project ↗</a>
 </nav>
+</div>
 </header>
 
 <main>
@@ -662,312 +862,348 @@ aria-hidden="true">
 <div class="container hero-grid">
 <div class="hero-copy">
 <span class="eyebrow">Thoughtful design. Meaningful impact.</span>
-<h1>Good businesses deserve <em>beautiful websites.</em></h1>
-<p>
-Valerie Studio creates elegant, intentional websites that help
-small businesses show up confidently, tell their story, and make
-a lasting first impression.
+<h1>Your business deserves a website that feels <em>exceptional.</em></h1>
+<p class="hero-description">
+We create polished, modern websites that help small businesses
+look their best, build trust, and turn curious visitors into
+potential customers.
 </p>
 <div class="hero-actions">
-<a class="button" href="#work">Explore the portfolio <span>↗</span></a>
-<a class="button button-light" href="#contact">Let's talk</a>
+<a class="button" href="#work">Explore Our Work ↗</a>
+<a class="button button-light" href="#contact">Let's Talk</a>
 </div>
 <div class="hero-note">Independent studio · Thoughtfully designed</div>
 </div>
 
 <div class="hero-visual">
 <img class="hero-image"
-src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=85"
-alt="A thoughtfully arranged web design workspace"
+src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85"
+alt="Beautiful, light-filled creative studio workspace"
 fetchpriority="high">
-<div class="image-caption">
-<strong>Design with intention.</strong>
-<span>Digital experiences made for growing businesses.</span>
+<div class="hero-image-label">
+<strong>Designed with intention.</strong>
+<span>Digital experiences for growing businesses.</span>
 </div>
 </div>
 </div>
 </section>
 
-<section class="statement" aria-label="Studio philosophy">
-<div class="container statement-inner">
-<p>Clear strategy. Refined visuals. A more confident online presence.</p>
-<span class="statement-mark" aria-hidden="true">✳</span>
+<div class="brand-strip">
+<div class="container brand-strip-inner">
+<p>Good design makes a lasting first impression.</p>
+<span>Creative · Strategic · Approachable</span>
 </div>
-</section>
+</div>
 
-<section class="section" id="work">
+<section class="portfolio" id="work">
 <div class="container">
 <div class="portfolio-top">
 <div class="section-heading">
-<span class="eyebrow">The portfolio</span>
-<h2>Digital homes for<br><em>ambitious businesses.</em></h2>
+<span class="eyebrow">Selected concepts</span>
+<h2>Websites made to stand out.</h2>
 <p>
-Explore concept websites created for different industries.
-Each project is designed to show how thoughtful web design can
-give a business its own distinctive presence.
+Explore our sample projects for businesses across different
+industries. Each concept demonstrates a different visual
+direction and customer experience.
 </p>
 </div>
-<a class="button button-light" href="#contact">Have a project? ↗</a>
+<a class="button button-light" href="#contact">Create Yours ↗</a>
 </div>
 
 <div class="project-grid">
-<article class="project">
-<a class="project-image-wrap" href="https://elohor003.github.io/landscaping-demo/" target="_blank" rel="noopener noreferrer" aria-label="View landscaping website concept">
-<img class="project-image" src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1000&q=80" alt="Lush green garden landscaping" loading="lazy">
-<span class="project-number">01 / LANDSCAPING</span>
-</a>
-<div class="project-info">
-<div><h3>Garden & Landscape</h3><p>Outdoor living · Website concept</p></div>
-<a class="project-link" href="https://elohor003.github.io/landscaping-demo/" target="_blank" rel="noopener noreferrer" aria-label="Open landscaping demo">↗</a>
+
+<article class="project-card">
+<div class="project-image-wrap">
+<img class="project-image"
+src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80"
+alt="Green landscape and carefully maintained grounds"
+loading="lazy">
+<span class="project-number">01 / 10</span>
+</div>
+<div class="project-content">
+<span class="project-category">Outdoor & Landscaping</span>
+<h3>Landscaping Concept</h3>
+<p>A fresh, nature-inspired website for landscaping and outdoor care businesses.</p>
+<a class="project-link" href="https://elohor003.github.io/landscaping-demo/" target="_blank" rel="noopener">View Website ↗</a>
 </div>
 </article>
 
-<article class="project">
-<a class="project-image-wrap" href="https://elohor003.github.io/roofing-demo/" target="_blank" rel="noopener noreferrer" aria-label="View roofing website concept">
-<img class="project-image" src="https://images.unsplash.com/photo-1635424710928-8c6e3e5e4f32?auto=format&fit=crop&w=1000&q=80" alt="Residential roof and exterior" loading="lazy">
-<span class="project-number">02 / ROOFING</span>
-</a>
-<div class="project-info">
-<div><h3>Summit Roofing Co.</h3><p>Home services · Website concept</p></div>
-<a class="project-link" href="https://elohor003.github.io/roofing-demo/" target="_blank" rel="noopener noreferrer" aria-label="Open roofing demo">↗</a>
+<article class="project-card">
+<div class="project-image-wrap">
+<img class="project-image"
+src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80"
+alt="Construction professional working on a building project"
+loading="lazy">
+<span class="project-number">02 / 10</span>
+</div>
+<div class="project-content">
+<span class="project-category">Home Improvement</span>
+<h3>Summit Roofing Co.</h3>
+<p>A strong, professional concept for roofing services, repairs, and home protection.</p>
+<a class="project-link" href="https://elohor003.github.io/roofing-demo/" target="_blank" rel="noopener">View Website ↗</a>
 </div>
 </article>
 
-<article class="project">
-<a class="project-image-wrap" href="https://elohor003.github.io/cleaning-demo/" target="_blank" rel="noopener noreferrer" aria-label="View cleaning website concept">
-<img class="project-image" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=80" alt="Clean, bright modern interior" loading="lazy">
-<span class="project-number">03 / CLEANING</span>
-</a>
-<div class="project-info">
-<div><h3>PureSpace Cleaning</h3><p>Home services · Website concept</p></div>
-<a class="project-link" href="https://elohor003.github.io/cleaning-demo/" target="_blank" rel="noopener noreferrer" aria-label="Open cleaning demo">↗</a>
+<article class="project-card">
+<div class="project-image-wrap">
+<img class="project-image"
+src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=80"
+alt="Clean, bright home interior"
+loading="lazy">
+<span class="project-number">03 / 10</span>
+</div>
+<div class="project-content">
+<span class="project-category">Cleaning Services</span>
+<h3>PureSpace Cleaning Co.</h3>
+<p>A bright, welcoming layout that presents cleaning services with clarity and confidence.</p>
+<a class="project-link" href="https://elohor003.github.io/cleaning-demo/" target="_blank" rel="noopener">View Website ↗</a>
 </div>
 </article>
 
-<article class="project">
-<a class="project-image-wrap" href="https://elohor003.github.io/nail-salon-demo/" target="_blank" rel="noopener noreferrer" aria-label="View nail salon website concept">
-<img class="project-image" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1000&q=80" alt="Elegant manicure and nail art" loading="lazy">
-<span class="project-number">04 / BEAUTY</span>
-</a>
-<div class="project-info">
-<div><h3>Maison Nails Studio</h3><p>Beauty & wellness · Website concept</p></div>
-<a class="project-link" href="https://elohor003.github.io/nail-salon-demo/" target="_blank" rel="noopener noreferrer" aria-label="Open nail salon demo">↗</a>
+<article class="project-card">
+<div class="project-image-wrap">
+<img class="project-image"
+src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1000&q=80"
+alt="Elegant manicure and nail art"
+loading="lazy">
+<span class="project-number">04 / 10</span>
+</div>
+<div class="project-content">
+<span class="project-category">Beauty & Self-Care</span>
+<h3>Maison Nails Studio</h3>
+<p>A refined beauty concept with an elegant look for nail appointments and salon services.</p>
+<a class="project-link" href="https://elohor003.github.io/nail-salon-demo/" target="_blank" rel="noopener">View Website ↗</a>
 </div>
 </article>
 
-<article class="project">
-<a class="project-image-wrap" href="https://elohor003.github.io/florist-demo/" target="_blank" rel="noopener noreferrer" aria-label="View florist website concept">
-<img class="project-image" src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1000&q=80" alt="Soft, seasonal floral arrangement" loading="lazy">
-<span class="project-number">05 / FLORAL DESIGN</span>
-</a>
-<div class="project-info">
-<div><h3>Bloom & Co.</h3><p>Floristry · Website concept</p></div>
-<a class="project-link" href="https://elohor003.github.io/florist-demo/" target="_blank" rel="noopener noreferrer" aria-label="Open florist demo">↗</a>
+<article class="project-card">
+<div class="project-image-wrap">
+<img class="project-image"
+src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1000&q=80"
+alt="Soft pink flowers in a beautiful floral arrangement"
+loading="lazy">
+<span class="project-number">05 / 10</span>
+</div>
+<div class="project-content">
+<span class="project-category">Flowers & Gifting</span>
+<h3>Bloom & Co.</h3>
+<p>A romantic, image-led concept for florists, special occasions, and thoughtful gifts.</p>
+<a class="project-link" href="https://elohor003.github.io/florist-demo/" target="_blank" rel="noopener">View Website ↗</a>
 </div>
 </article>
 
-<article class="project">
-<a class="project-image-wrap" href="https://elohor003.github.io/pet-grooming-demo/" target="_blank" rel="noopener noreferrer" aria-label="View pet grooming website concept">
-<img class="project-image" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1000&q=80" alt="Happy dogs enjoying time outdoors" loading="lazy">
-<span class="project-number">06 / PET CARE</span>
-</a>
-<div class="project-info">
-<div><h3>Paws & Polish</h3><p>Pet care · Website concept</p></div>
-<a class="project-link" href="https://elohor003.github.io/pet-grooming-demo/" target="_blank" rel="noopener noreferrer" aria-label="Open pet grooming demo">↗</a>
+<article class="project-card">
+<div class="project-image-wrap">
+<img class="project-image"
+src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1000&q=80"
+alt="A happy dog enjoying a moment outdoors"
+loading="lazy">
+<span class="project-number">06 / 10</span>
+</div>
+<div class="project-content">
+<span class="project-category">Pets & Grooming</span>
+<h3>Paws & Polish</h3>
+<p>A friendly, caring website concept for pet grooming and animal care businesses.</p>
+<a class="project-link" href="https://elohor003.github.io/pet-grooming-demo/" target="_blank" rel="noopener">View Website ↗</a>
 </div>
 </article>
 
-<article class="project">
-<a class="project-image-wrap" href="https://elohor003.github.io/interior-design-demo/" target="_blank" rel="noopener noreferrer" aria-label="View interior design website concept">
-<img class="project-image" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80" alt="Sophisticated neutral living room" loading="lazy">
-<span class="project-number">07 / INTERIORS</span>
-</a>
-<div class="project-info">
-<div><h3>Atelier Living</h3><p>Interior design · Website concept</p></div>
-<a class="project-link" href="https://elohor003.github.io/interior-design-demo/" target="_blank" rel="noopener noreferrer" aria-label="Open interior design demo">↗</a>
+<article class="project-card">
+<div class="project-image-wrap">
+<img class="project-image"
+src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80"
+alt="Sophisticated contemporary living room interior"
+loading="lazy">
+<span class="project-number">07 / 10</span>
+</div>
+<div class="project-content">
+<span class="project-category">Interiors & Lifestyle</span>
+<h3>Atelier Living</h3>
+<p>A sophisticated editorial-style concept for interior designers and home styling studios.</p>
+<a class="project-link" href="https://elohor003.github.io/interior-design-demo/" target="_blank" rel="noopener">View Website ↗</a>
 </div>
 </article>
 
-<article class="project">
-<a class="project-image-wrap" href="https://elohor003.github.io/photography-studio-demo/" target="_blank" rel="noopener noreferrer" aria-label="View photography studio website concept">
-<img class="project-image" src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=1000&q=80" alt="Professional camera for a photography studio" loading="lazy">
-<span class="project-number">08 / PHOTOGRAPHY</span>
-</a>
-<div class="project-info">
-<div><h3>Golden Hour Studio</h3><p>Creative services · Website concept</p></div>
-<a class="project-link" href="https://elohor003.github.io/photography-studio-demo/" target="_blank" rel="noopener noreferrer" aria-label="Open photography demo">↗</a>
+<article class="project-card">
+<div class="project-image-wrap">
+<img class="project-image"
+src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1000&q=80"
+alt="Camera ready for a photography session"
+loading="lazy">
+<span class="project-number">08 / 10</span>
+</div>
+<div class="project-content">
+<span class="project-category">Photography & Creative</span>
+<h3>Golden Hour Studio</h3>
+<p>A visual-first portfolio concept for photographers and creative professionals.</p>
+<a class="project-link" href="https://elohor003.github.io/photography-studio-demo/" target="_blank" rel="noopener">View Website ↗</a>
 </div>
 </article>
 
-<article class="project">
-<a class="project-image-wrap" href="https://elohor003.github.io/restaurant-demo/" target="_blank" rel="noopener noreferrer" aria-label="View restaurant website concept">
-<img class="project-image" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=80" alt="An elegant restaurant dining experience" loading="lazy">
-<span class="project-number">09 / HOSPITALITY</span>
-</a>
-<div class="project-info">
-<div><h3>Savor & Sage Bistro</h3><p>Restaurant · Website concept</p></div>
-<a class="project-link" href="https://elohor003.github.io/restaurant-demo/" target="_blank" rel="noopener noreferrer" aria-label="Open restaurant demo">↗</a>
+<article class="project-card">
+<div class="project-image-wrap">
+<img class="project-image"
+src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80"
+alt="Warm, inviting restaurant dining room"
+loading="lazy">
+<span class="project-number">09 / 10</span>
+</div>
+<div class="project-content">
+<span class="project-category">Food & Hospitality</span>
+<h3>Savor & Sage Bistro</h3>
+<p>A welcoming restaurant concept designed to showcase atmosphere, food, and dining experiences.</p>
+<a class="project-link" href="https://elohor003.github.io/restaurant-demo/" target="_blank" rel="noopener">View Website ↗</a>
 </div>
 </article>
 
-<article class="project">
-<a class="project-image-wrap" href="https://elohor003.github.io/bakery-cafe-demo/" target="_blank" rel="noopener noreferrer" aria-label="View bakery cafe website concept">
-<img class="project-image" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=80" alt="Fresh artisan bread in a bakery" loading="lazy">
-<span class="project-number">10 / BAKERY & CAFE</span>
-</a>
-<div class="project-info">
-<div><h3>Butter & Bloom</h3><p>Food & beverage · Website concept</p></div>
-<a class="project-link" href="https://elohor003.github.io/bakery-cafe-demo/" target="_blank" rel="noopener noreferrer" aria-label="Open bakery cafe demo">↗</a>
+<article class="project-card">
+<div class="project-image-wrap">
+<img class="project-image"
+src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=80"
+alt="Fresh artisan bread displayed at a bakery"
+loading="lazy">
+<span class="project-number">10 / 10</span>
+</div>
+<div class="project-content">
+<span class="project-category">Bakery & Café</span>
+<h3>Butter & Bloom</h3>
+<p>A warm, appetizing concept for bakeries and cafés with a focus on fresh products and atmosphere.</p>
+<a class="project-link" href="https://elohor003.github.io/bakery-cafe-demo/" target="_blank" rel="noopener">View Website ↗</a>
 </div>
 </article>
+
 </div>
 
 <p class="portfolio-note">
-These projects are website concepts created to demonstrate design
-possibilities. Project links should be checked against the published
-demo websites before sharing this portfolio with clients.
+These are portfolio concepts. Project previews open separately so visitors can explore each design.
 </p>
 </div>
 </section>
 
-<section class="section services-section" id="services">
+<section id="services">
 <div class="container">
 <div class="section-heading">
-<span class="eyebrow">What I do</span>
-<h2>Thoughtful design,<br>built around your business.</h2>
+<span class="eyebrow">What we do</span>
+<h2>Everything your online presence needs to begin.</h2>
 <p>
-A good website should look beautiful, communicate clearly, and make
-the next step easy for your customers.
+A considered approach to design, built around your business,
+your customers, and the impression you want to make.
 </p>
 </div>
 
 <div class="services-grid">
-<article class="service">
-<span class="service-index">01 — DESIGN</span>
+<article class="service-card">
+<span class="service-number">01</span>
 <h3>Website Design</h3>
-<p>
-Distinctive layouts, considered typography, and a visual direction
-that reflects your business and the people you want to reach.
-</p>
+<p>Modern, responsive websites designed to reflect your brand and make your business easy to understand.</p>
 </article>
 
-<article class="service">
-<span class="service-index">02 — BUILD</span>
-<h3>Website Development</h3>
-<p>
-Responsive, thoughtfully structured websites that are designed
-to work across modern phones, tablets, and computers.
-</p>
+<article class="service-card">
+<span class="service-number">02</span>
+<h3>Small Business Websites</h3>
+<p>Clear service pages, thoughtful layouts, and contact pathways that help potential customers take the next step.</p>
 </article>
 
-<article class="service">
-<span class="service-index">03 — REFINE</span>
+<article class="service-card">
+<span class="service-number">03</span>
 <h3>Website Refresh</h3>
-<p>
-A more polished online presence for businesses ready to improve
-their presentation, messaging, and customer experience.
-</p>
+<p>A cleaner, more cohesive visual experience for businesses ready to improve their existing online presence.</p>
 </article>
 </div>
 </div>
 </section>
 
-<section class="section" id="process">
+<section class="about" id="about">
+<div class="container about-grid">
+<div class="about-art">
+<img
+src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=85"
+alt="Creative notes and planning on a desk"
+loading="lazy">
+</div>
+
+<div class="about-copy">
+<span class="eyebrow">The studio philosophy</span>
+<h2>Small business. Big potential.</h2>
+<p>
+Valerie Studio is a digital design studio focused on helping
+businesses present themselves with clarity, personality, and
+confidence.
+</p>
+<p>
+We believe a website should do more than look beautiful.
+It should tell your story, communicate your value, and make
+it easier for the right people to connect with you.
+</p>
+
+<div class="about-points">
+<div class="about-point">Thoughtful visual design</div>
+<div class="about-point">Mobile-friendly layouts</div>
+<div class="about-point">Clear customer journeys</div>
+<div class="about-point">Business-focused approach</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="process">
 <div class="container">
 <div class="section-heading">
-<span class="eyebrow">A considered process</span>
-<h2>From first idea to<br><em>your online home.</em></h2>
-<p>
-A clear, collaborative process keeps your website focused on your
-goals from the beginning.
-</p>
+<span class="eyebrow">A simple process</span>
+<h2>From first idea to online presence.</h2>
+<p>A straightforward process designed to make working together feel clear and comfortable.</p>
 </div>
 
 <div class="process-grid">
-<article class="process-step">
-<span>STEP 01</span>
+<article class="process-card">
+<span class="step">STEP 01</span>
 <h3>Discover</h3>
-<p>
-We discuss your business, your audience, your priorities, and
-the feeling you want your website to communicate.
-</p>
+<p>We learn about your business, your goals, your audience, and the feeling you want your website to convey.</p>
 </article>
-<article class="process-step">
-<span>STEP 02</span>
-<h3>Design & Build</h3>
-<p>
-Your website takes shape through thoughtful layouts, clear
-content, relevant imagery, and responsive development.
-</p>
+
+<article class="process-card">
+<span class="step">STEP 02</span>
+<h3>Design</h3>
+<p>We shape the layout, imagery, messaging, and visual direction around your business needs.</p>
 </article>
-<article class="process-step">
-<span>STEP 03</span>
-<h3>Review & Launch</h3>
-<p>
-We review the details, test key links and layouts, and prepare
-the finished website for launch.
-</p>
+
+<article class="process-card">
+<span class="step">STEP 03</span>
+<h3>Launch</h3>
+<p>After review and agreed adjustments, your website can be prepared for launch and shared with your audience.</p>
 </article>
 </div>
 </div>
 </section>
 
-<section class="section about-section" id="about">
-<div class="container">
-<div class="about-panel">
-<img class="about-image"
-src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85"
-alt="Bright, carefully designed creative workspace"
-loading="lazy">
-<div class="about-copy">
-<span class="eyebrow">A little about the studio</span>
-<h2>Small studio.<br>Big attention to detail.</h2>
-<p>
-Valerie Studio is built around a simple belief: every business
-deserves a website that feels considered, professional, and true
-to its identity.
-</p>
-<p>
-I create website concepts for different industries and work
-toward digital experiences that balance visual quality with
-practical purpose.
-</p>
-<a class="button button-light" href="#contact">Tell me about your business ↗</a>
-</div>
-</div>
-</div>
-</section>
-
-<section class="contact-section" id="contact">
-<div class="container contact-inner">
-<span class="eyebrow">Your next chapter starts here</span>
-<h2>Let's make your<br><em>online presence shine.</em></h2>
-<p>
-Have a business, an idea, or a website that needs a fresh start?
-Tell me a little about it. I'd love to hear what you're building.
-</p>
-<a class="button" href="mailto:valerie.uxdesign@gmail.com?subject=Website%20Design%20Inquiry">
-Start a conversation <span>↗</span>
-</a>
+<section class="contact" id="contact">
+<div class="container contact-grid">
 <div>
-<a class="email-link" href="mailto:valerie.uxdesign@gmail.com">valerie.uxdesign@gmail.com</a>
+<span class="eyebrow">Have a business in mind?</span>
+<h2>Let's create something remarkable.</h2>
+<p>
+Tell us a little about your business and the website you're
+dreaming of. We'd love to hear what you're building.
+</p>
 </div>
+<a class="button"
+href="mailto:valerie.uxdesign@gmail.com?subject=Website%20Design%20Inquiry">
+Discuss Your Project ↗
+</a>
 </div>
 </section>
 </main>
 
-<footer class="site-footer">
+<footer>
 <div class="container footer-inner">
-<a class="brand" href="#home">
-<span class="brand-name">Valerie Studio</span>
-<span class="brand-subtitle">Independent Web Design</span>
-</a>
-<p>© <span id="year"></span> Valerie Studio. Designed with intention.</p>
-<div class="footer-links">
-<a href="#work">Portfolio</a>
-<a href="#services">Services</a>
-<a href="mailto:valerie.uxdesign@gmail.com">Email</a>
+<div>
+<a class="footer-brand" href="#home">Valerie Studio</a>
+<p>Thoughtful websites for ambitious businesses.</p>
+<p>© <span id="year"></span> Valerie Studio. All rights reserved.</p>
 </div>
+<a class="footer-email" href="mailto:valerie.uxdesign@gmail.com">
+valerie.uxdesign@gmail.com
+</a>
 </div>
 </footer>
 
@@ -975,26 +1211,22 @@ Start a conversation <span>↗</span>
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
-menuToggle.addEventListener("click", () => {
+menuToggle.addEventListener("click", function () {
 const isOpen = navLinks.classList.toggle("open");
 menuToggle.setAttribute("aria-expanded", String(isOpen));
-menuToggle.setAttribute(
-"aria-label",
-isOpen ? "Close navigation menu" : "Open navigation menu"
-);
+menuToggle.textContent = isOpen ? "Close ×" : "Menu ☰";
 });
 
-navLinks.querySelectorAll("a").forEach((link) => {
-link.addEventListener("click", () => {
+navLinks.querySelectorAll("a").forEach(function (link) {
+link.addEventListener("click", function () {
 navLinks.classList.remove("open");
 menuToggle.setAttribute("aria-expanded", "false");
-menuToggle.setAttribute("aria-label", "Open navigation menu");
+menuToggle.textContent = "Menu ☰";
 });
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
-
-
